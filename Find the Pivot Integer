@@ -1,0 +1,15 @@
+class Solution {
+    public int pivotInteger(int n) {
+        int pivot = n;
+        int total = (n * (n + 1)) / 2;
+        int right = 0;
+        while (pivot > 0) {
+            int left = total - right;
+            right += pivot;
+            if (left == right)
+                return pivot;
+            pivot--;
+        }
+        return -1;
+    }
+}
