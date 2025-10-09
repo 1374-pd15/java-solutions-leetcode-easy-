@@ -1,0 +1,13 @@
+class Solution {
+    public int passThePillow(int n, int time) {
+        int ct = time / (n-1);
+        int rt = time % (n-1);
+        int ans = 0;
+        if (ct % 2 != 0) {
+            ans = n - rt;
+        } else {
+            ans = rt + 1;
+        }
+        return ans;
+    }
+}
